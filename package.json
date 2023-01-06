@@ -1,0 +1,14 @@
+{
+  "name": "addtodoist-autodelete-dms",
+  "type": "module",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "David Jiménez <dubisdev@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "twitter-api-v2": "^1.13.0"
+  }
+}

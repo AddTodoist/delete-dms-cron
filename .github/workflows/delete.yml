@@ -1,0 +1,24 @@
+name: learn-github-actions
+on:
+  workflow_dispatch:
+
+  schedule:
+    # every 15 minutes
+    - cron:  '*/15 * * * *'
+
+jobs:
+  delete-dm:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+        env:
+          APP_KEY: ${{ secrets.APP_KEY }}
+          APP_SECRET: ${{ secrets.APP_SECRET }}
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          ACCESS_SECRET: ${{ secrets.ACCESS_SECRET }}
+
+      - run: yarn
+      - run: yarn start
