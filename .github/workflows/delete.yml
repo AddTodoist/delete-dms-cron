@@ -1,4 +1,4 @@
-name: learn-github-actions
+name: delete-dms
 on:
   workflow_dispatch:
 
